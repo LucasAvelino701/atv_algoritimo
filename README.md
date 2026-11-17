@@ -6,7 +6,6 @@ construa um algoritmo que simule uma carteira digital, com os campos: cliente; s
 
 #define MAX_CLIENTES 5
 
-// Definição da estrutura da Carteira Digital
 typedef struct {
     char cliente[50];
     int numero;
@@ -14,7 +13,6 @@ typedef struct {
     float saldo;
 } Carteira;
 
-// Protótipos das funções solicitadas
 void cadastrar_cliente(Carteira carteiras[], int *qtd);
 void exibir_carteira(Carteira carteiras[], int qtd);
 
@@ -60,7 +58,6 @@ int main() {
     return 0;
 }
 
-// Função para cadastrar/abrir uma nova carteira
 void cadastrar_cliente(Carteira carteiras[], int *qtd) {
     if (*qtd >= MAX_CLIENTES) {
         printf("\nErro: Limite maximo de %d clientes atingido!\n", MAX_CLIENTES);
@@ -88,7 +85,6 @@ void cadastrar_cliente(Carteira carteiras[], int *qtd) {
     printf("Carteira aberta com sucesso!\n");
 }
 
-// Função para exibir as informações e estatísticas das carteiras[cite: 1]
 void exibir_carteira(Carteira carteiras[], int qtd) {
     if (qtd == 0) {
         printf("\nNenhuma carteira cadastrada no momento.\n");
